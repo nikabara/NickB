@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+table {
+    border: solid black 1px;
+    border-collapse: collapse;
+    width: 490px;
+    height: 400px;
+    position: fixed;
+    inset: 0px;
+    margin: auto;
+}
+
+.main td {
+    background-color: rgb(223, 183, 183);
+}
+
+td { 
+    border: solid black 1px;
+    background-color: beige;
+}
