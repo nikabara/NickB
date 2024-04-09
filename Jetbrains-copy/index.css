@@ -307,6 +307,30 @@ nav {
     margin-top: 40px;
 }
 
+.p-l-buttons {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    width: 800px;
+}
+
+.p-l-button:first-of-type, .p-l-button:nth-of-type(7) {
+    margin-left: 0px;
+}
+
+.p-l-button:hover {
+    background-color: rgba(241, 170, 162, 0.879);
+}
+
+.p-l-button {
+    font-size: 17px;
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    margin: 10px 5px;
+    transition: ease-in-out 0.1s;
+}
+
 @media (max-width: 1130px) {
     .section-3 {
         flex-direction: column;
