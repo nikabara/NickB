@@ -1,0 +1,85 @@
+@font-face {
+    font-family: allura;
+    src: url("./Allura-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+
+    background-image: url("https://wallpapers.com/images/hd/neon-green-binary-matrix-m4wy5p3m2mc0jdfn.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-div {
+    width: 1200px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    margin: auto;
+    width: 350px;
+    height: 95%;
+    background-color: #bbdac6;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 5px green;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.card-image {
+    border-radius: 10px 10px 0px 0px;
+    height: 70%;
+    width: 100%;
+    background-image: url("https://m.media-amazon.com/images/I/71PQje4I99L._AC_UF894,1000_QL80_.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card-content {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.description {
+    font-family: allura;
+    font-size: 30px;
+}
+
+.continue-btn {
+    width: 70%;
+    height: 50px;
+    font-family: allura;
+    font-size: 25px;
+    color: white;
+    background-color: #00a632;
+
+    border: none;
+    outline: none;
+    border-radius: 15px;
+}
