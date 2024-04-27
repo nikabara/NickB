@@ -9,33 +9,55 @@
 </head>
 <body>
 
-    <aside class="aside-left">
-        <div class="youtube-main-logo-outter">
-            <img src="./images/YoutubeLogo-removebg-preview.png" alt="" class="youtube-main-logo">
+    <aside class="aside-left" id="sidebar">
+        <div class="sidebar-toggler" id="sidebar-toggle-btn">
+            <i class="bi bi-arrow-right-short" id="menu-arrow"></i>
         </div>
-        <a href="" class="sidebar-options options1">Home</a>
-        <a href="" class="sidebar-options options2">Shorts</a>
-        <a href="" class="sidebar-options options3">Subscriptions</a>
-        <a href="" class="sidebar-options options4">Collections</a>
-        <a href="" class="sidebar-options options5">History</a>
+
+        <div class="youtube-main-logo-outter">
+            <a href=""><img src="./images/YoutubeWhiteLogo-removebg-preview.png" alt="" class="youtube-main-logo"></a>
+        </div>
+
+        <a href="" class="sidebar-options options1">
+            <i class="bi bi-house-door-fill"></i> Home
+        </a>
+        <a href="" class="sidebar-options options2">
+            <i class="bi bi-camera-reels-fill"></i> Shorts
+        </a>
+        <a href="" class="sidebar-options options3">
+            <i class="bi bi-collection-play-fill"></i> Subscriptions
+        </a>
+        <a href="" class="sidebar-options options4">
+            <i class="bi bi-bag-plus-fill"></i> Collections
+        </a>
+        <a href="" class="sidebar-options options5">
+            <i class="bi bi-clock-history"></i> History
+        </a>
     </aside>
     
     <header>
         <nav>
             <div class="header-nav-input-group">
-                <input class="header-nav-input" type="text">
-                <!-- bootstrap search icon -->
+                <input class="header-nav-input" type="text" placeholder="Search..." spellcheck="false">
+                <i class="bi bi-search"></i>
             </div>
-            <div class="header-nav-side-options"></div>
+            <div class="header-nav-side-options">
+                <i class="bi bi-plus-square-fill"></i>
+                <i class="bi bi-bell-fill"></i>
+                <i class="bi bi-circle-fill"></i>
+            </div>
         </nav>
         
         <section class="youtube-banner"> <!-- has background image -->
-            <h1 class="youtube-banner-name">JOSHUAMAYO</h1>
+            <h1 class="youtube-banner-name"><span>JOSHUA</span>MAYO</h1>
 
             <div class="youtube-banner-options">
                 <div class="banner-options-top">
-                    <img src="" alt="" class="youtube-banner-options-img">
-                    <p class="sub-count">418k Subscribers</p>
+                    <img src="./images/RandomMan.jpg" alt="" class="youtube-banner-options-img"> 
+                    <div class="banner-options-top-left">
+                        <p class="youtuber-name">Joshua Mayo</p>
+                        <p class="sub-count">418k Subscribers</p>
+                    </div>
                 </div>
                 <div class="banner-options-bottom">
                     <button class="banner-options-btn sub-btn">Subscriber</button>
