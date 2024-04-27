@@ -23,6 +23,7 @@ aside {
     display: flex;
     flex-direction: column;
     padding: 10px 15px;
+    /* overflow-y: hidden; */
     z-index: 2;
 }
 
@@ -58,7 +59,7 @@ aside {
 }
 
 .youtube-main-logo {
-    width: 120px;
+    width: 140px;
     height: auto;
 }
 
@@ -86,7 +87,11 @@ aside {
 
 header {
     background: rgb(154,203,207);
-    background: linear-gradient(90deg, rgba(154,203,207,1) 0%, rgba(129,190,193,1) 15%, rgba(86,168,180,1) 50%, rgba(76,163,181,1) 72%, rgba(59,158,174,1) 100%);
+    /* background: linear-gradient(90deg, rgba(154,203,207,1) 0%, rgba(129,190,193,1) 15%, rgba(86,168,180,1) 50%, rgba(76,163,181,1) 72%, rgba(59,158,174,1) 100%); */
+    background-image: url("https://i.pinimg.com/originals/c5/de/0b/c5de0baee57e9bda74bfbeb0c533ba75.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100vw;
     height: 250px;
     position: relative;
@@ -106,6 +111,7 @@ header > nav {
 .header-nav-side-options {
     position: absolute;
     right: 30px;
+    top: 3px;
     width: 150px;
     height: 80%;
     display: flex;
@@ -173,13 +179,10 @@ header > nav {
     position: absolute;
     bottom: 15px;
     right: 15px;
-}
-
-.youtube-banner-options {
     border-radius: 15px;
-    background-color: #192e33;
+    background-color: #131d1f;
     width: 200px;
-    height: 90px;
+    height: 95px;
 }
 
 .banner-options-top, .banner-options-bottom {
@@ -190,9 +193,48 @@ header > nav {
     justify-content: space-around;
 }
 
+.banner-options-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px 0px 15px;
+}
+
+.banner-options-top-left {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.banner-options-bottom {
+    padding: 0px;
+    justify-content: center !important; 
+}
+
+.sub-btn {
+    width: 100px;
+    height: 25px;
+    background-color: #fd0101;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-weight: 600;
+}
+
+.join-btn {
+    color: black;
+    font-weight: 600;
+    width: 60px;
+    border-radius: 8px;
+    height: 25px;
+    border: none;
+    margin-left: 8px;
+
+}
+
 .youtube-banner-options-img {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background-color: white;
     border-radius: 100%;
     display: flex;
@@ -200,4 +242,25 @@ header > nav {
 
 .banner-options-top-left > p {
     color: white;
+    font-weight: 600;
+}
+
+.youtuber-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+    text-align: center;
+}
+
+.youtuber-name > i {
+    margin-top: 3.5px;
+    font-size: 11px;
+    color: white;
+}
+
+main {
+    background: rgb(16,19,29);
+    background: linear-gradient(90deg, rgba(16,19,29,1) 0%, rgba(17,27,34,1) 25%, rgba(17,34,34,1) 50%, rgba(17,34,27,1) 75%, rgba(15,27,19,1) 100%);
+    height: calc(100vh - 250px);
 }
