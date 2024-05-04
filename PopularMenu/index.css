@@ -9,8 +9,25 @@
     color: black;
 }
 
-html, body {
-    height: 100%;
+::-webkit-scrollbar {
+    display: none;
+}
+
+#scrollbar-top {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+}
+
+#scrollbar-top-thumb {
+    width: 0;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--main-orange);
 }
 
 :root {
@@ -20,18 +37,20 @@ html, body {
 }
 
 header {
-    width: 100vw;
+    max-width: 100%;
     height: auto;
 }
 
 .header-nav {
-    width: 85%;
+    /* this was 85% */
+    width: 85%; 
     height: 50px;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: center;
     margin-bottom: 25px;
+    margin-top: 25px;
 }
 
 .header-nav-title {
@@ -75,6 +94,7 @@ header {
     background-size: cover;
 }
 
+/* problem might be here */
 .dessert-card-bottom {
     border-radius: 0 0 20px 20px;
     display: grid;
@@ -144,17 +164,59 @@ header {
 
 main {
     margin-top: 50px;
-    max-width: 100%;
+    width: 100%;
     height: 455px;
     background-image: url("https://cookiesandcups.com/wp-content/uploads/2013/12/cake-mix-brownies-8.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
 }
 
+main::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: #8c808030;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
+.main-content {
+    width: 70%;
+    height: 214px;
+    background-color: #00000089;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
 
+.main-content > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.main-content > button {
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    justify-self: center;
+    margin-top: 20px;
+    background-color: var(--main-orange);
+    color: white;
+    border: none;
+    font-weight: 600;
+}
 
 
 
