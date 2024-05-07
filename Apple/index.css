@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+:root {
+    --main-bg: #01e17e;
+    --apple-bg: #a3e718;
+    --button-bg: #ff4444;
+}
+
+body {
+    background-color: var(--main-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    align-items: center;
+    position: relative;
+
+    width: 60vw;
+    height: 90vh;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.apple-card {
+    background-color: var(--apple-bg);
+    border-radius: inherit;
+    height: 85%;
+    width: 100%;
+    margin-left: -40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 5px 5px 30px rgba(110, 110, 110, 0.449);
+}
+
+article {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-color: #ff4444;
+}
+
+.card-icons {
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 30px;
+    height: 50px;
+}
+
+.card-icons > i {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.apple-card-img {
+    margin-left: -60px;
+}
+
+.apple-perspectives {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    border-radius: 0px 0px 8px 8px;
+}
