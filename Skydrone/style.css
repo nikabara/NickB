@@ -16,11 +16,17 @@
 
 :root {
     --web-orange: #C4730A;
+    --web-light-orange: #DF8928;
     --web-gray: #5E5E5E;
     --web-title: #393939;
     --web-description-brown: #612B00;
     --web-companies-text: #4B4B4B;
-;
+    --web-light-grey: #F3F3F3;
+    --web-dark-white: #FCF6F0;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 header {
@@ -133,7 +139,6 @@ main {
 
 .main-sec-1 {
     height: 100vh;
-    background-color: aliceblue;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -164,4 +169,215 @@ main {
 .companies-row-1 > img,  .companies-row-2 > img {
     width: 147px;
     height: 37px;
+}
+
+.main-sec-2 {
+    padding: 25px 0px;
+    /* height: 82px; */
+    background-color: var(--web-light-grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.features-text {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.features-grey-spheres {
+    width: 11px;
+    height: auto;
+}
+
+.main-sec-3 {
+    height: 100vh;
+    /* background-color: aliceblue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 400px 50px;
+}
+
+.man-in-the-field-img {
+    width: 600px;
+    height: 580px;
+    border-radius: 4px 4px 1000px 4px;
+    box-shadow: 5px 5px 10px #80808050;
+}
+
+.sec-3-article {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+}
+
+.sec-3-slogan {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.sec-3-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--web-light-orange);
+}
+
+.sec-3-features-outter {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.sec-3-features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sec-3-feature-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--web-companies-text);
+}
+
+.sec-3-feature-description {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--web-companies-text);
+}
+    
+.main-sec-4 {
+    height: 518px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.customer-review {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.customer-img {
+    width: 56px;
+    height: auto;
+}
+
+.customer-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+
+.customer-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.customer-pos-company {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.review {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+/* main-sec-5 is same as main-sec-3 */
+#man-in-the-field2 {
+    border-radius: 1000px 4px 4px 4px !important;
+    box-shadow: -5px -5px 10px #80808050;
+}
+
+.main-sec-6 {
+    height: 850px;
+    background-image: url("./Images/background-images/ManWithKid.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.sec-6-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 24px;
+    margin-top: 150px;
+}
+
+.sec-6-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--web-companies-text);
+}
+
+.sec-6-description {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--web-companies-text);
+    line-height: 30px;
+}
+
+.main-sec-7 {
+    height: 212px;
+    background: linear-gradient(91.76deg, #D48C04 -11.76%, #B35911 103.23%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 64px;
+}
+
+.sec-7-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+
+.download-text {
+    color: var(--web-dark-white);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.download-description {
+    color: var(--web-dark-white);
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.download-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 16px;
+}
+
+.download-link {
+    width: 216px;
+    height: 70px;
 }
