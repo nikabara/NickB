@@ -381,3 +381,155 @@ main {
     width: 216px;
     height: 70px;
 }
+
+.main-sec-8 {
+    height: 100vh;
+    width: 100vw;
+    padding: 0 64px;
+    align-items: center;
+    align-content: center;
+}
+
+.sec-8-description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sec-8-title {
+    color: var(--web-orange);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 20%;
+}
+
+.sec-8-slogan {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.sec-8-article {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec-8-article-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact > i {
+    font-size: 20px;
+    color: var(--web-orange);
+    margin-left: 2px;
+}
+
+.contact > h3 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.contact > p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+footer {
+    height: 398px;
+    padding: 80px;
+    background-color: var(--web-companies-text);
+}
+
+#nav-left {
+    gap: 5px;
+}
+
+#elipses {
+    width: 30px;
+    height: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin-top: 1px;
+}
+
+#elipses > img {
+    width: 14px;
+    height: 14px;
+}
+
+#page-title {
+    font-size: 41px !important;
+    font-weight: 700;
+    color: var(--web-light-grey);
+}
+
+
+
+.footer-row-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-medias {
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 80px;
+}
+
+.social-media > i {
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.footer-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.footer-options {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.footer-row-2 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 70px;
+    padding: 50px 0 0 0;
+    border-top: solid var(--web-gray) 2px;
+}
+
+.footer-row-2-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.web-page-preset, .copyright {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--web-dark-white);
+}
+
+@media (max-width: 1134px) {
+
+}
