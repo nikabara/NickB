@@ -110,11 +110,16 @@ nav {
     z-index: 1;
     background-color: #ffffff;
     border-radius: 0px 50% 50% 0px;
+}
+
+.header-content {
+    position: absolute;
+    z-index: 2;
+    top: 40%;
+    left: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 20px;
-    padding-left: 50px;
 }
 
 .header-description {
@@ -531,5 +536,69 @@ footer {
 }
 
 @media (max-width: 1134px) {
+    .header-left-circle {
+        display: none;
+    }
+    .header-content {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+    .header-slogan {
+        font-size: 28px;
+        font-weight: 700;
+    }
+    header {
+        position: relative;
+        height: 100vh;
+        background-image: url("./Images/background-images/HeaderBackground.jpg");
+        background-position: center;
+        background-size: 700%;
+        overflow: hidden;
+        background-repeat: no-repeat;
+    }
+    .sec-1-text {
+        margin-bottom: 70px;
+    }
+    .main-sec-1 {
+        gap: 0px;
+    }  
+    .companies-row-1, .companies-row-2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 70px;
+    }
+    .companies-row-1 {
+        margin-bottom: 70px;
+    }
+    
+    .main-sec-2 {
+        display: none;
+    }
 
+    .main-sec-3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 100px;
+        /* margin-bottom: 150px; */
+        padding: 0px 0px;
+    }
+    .man-in-the-field-img {
+        width: 580px !important;
+        height: 580px !important;
+    }
+    .sec-3-features-outter {
+        flex-direction: column;
+    }
+    .main-sec-4 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        height: auto;
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
 }
