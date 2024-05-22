@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: black;
+    transition: ease-in-out 0.2s;
+}
+
+body {
+    background-image: url("./Images/Oceanpets\ Landing\ -\ ROADMAP.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+nav {
+    padding: 60px 60px 120px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.web-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.web-logo {
+    width: 256px;
+    height: 35px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 52px;
+}
+
+
+.navigation-link {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff99;
+}
+
+.navigation-link:hover {
+    color: #ffffff;
+}
+
+
+main {
+    /* background-color:burlywood; */
+    width: 68%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    justify-content: center;
+}
+
+.main__article {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.roadmap {
+    font-weight: 700;
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.roadmap-description {
+    max-width: 650px;
+    font-weight: 400px;
+    font-size: 18px;
+    line-height: 26px;
+    color: #ffffff99;
+}
+
+
+
+@media (max-width: 1250px) {
+    .nav-right {
+        display: none;
+    }
+}
