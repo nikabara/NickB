@@ -8,6 +8,10 @@
     transition: ease-in-out 0.2s;
 }
 
+ul[class$="display-ulist"] {
+    list-style-type: none;
+}
+
 body {
     background-image: url("./Images/Oceanpets\ Landing\ -\ ROADMAP.png");
     background-position: center;
@@ -17,7 +21,7 @@ body {
 }
 
 nav {
-    padding: 60px 60px 120px 60px;
+    padding: 60px 60px 50px 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -60,13 +64,13 @@ nav {
 
 
 main {
-    /* background-color:burlywood; */
-    width: 68%;
+
+    width: 75%;
     margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    gap: 40px;
     justify-content: center;
 }
 
@@ -90,10 +94,68 @@ main {
     color: #ffffff99;
 }
 
+.main__patches {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    
+}
+
+.main__Q4-2021, .main__Q1-2022 {
+    background: #FFFFFF33;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.Q-title {
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+
+.patch-rows {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.display-ulist {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ulist-options {
+    color: #ffffff;
+}
+
+.ulist-options > img{
+    margin-right: 14px;
+}
 
 
-@media (max-width: 1250px) {
+@media (max-width: 1350px) {
     .nav-right {
         display: none;
+    }
+    .main__patches {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 15px;
+    }
+}
+
+@media (max-width: 817px) {
+    .patch-rows {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 15px;
+    }
+
+    body {
+        padding-bottom: 100px;
     }
 }
