@@ -1,0 +1,16 @@
+@font-face {
+    font-family: Hind;
+    src: url("../fonts/Hind-Medium.ttf");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-family: Hind;
+    transition: ease-in-out .2s
+}
+
