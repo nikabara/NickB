@@ -32,7 +32,8 @@ main .box {
 }
 main .box .box__row1 {
   display: grid;
-  column-gap: 8px;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
   grid-template-areas: "img h2 h2" "img pa pa" "img stars pr";
 }
 main .box .box__row1 h2 {
@@ -114,6 +115,4 @@ main .box .box__row3 button[class=alternative] p {
   main {
     grid-template-columns: 1fr;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
