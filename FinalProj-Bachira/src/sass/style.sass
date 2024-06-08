@@ -1,0 +1,35 @@
+@use 'abstracts/_fonts.sass' as fonts
+@use 'abstracts/_colors.sass' as colors
+    
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    transition: ease-in-out .2s
+    text-decoration: none
+    color: colors.$web-black
+    @include fonts.Manrope()
+
+header
+    display: flex
+    flex-direction: column
+    background-color: beige
+
+    img.logo
+        width: 123px
+        height: 36px
+
+    .header__nav-options
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+    .header__nav
+        width: 100%
+        background-color: aliceblue
+        display: grid
+        grid-template-columns: 1fr 471px 1fr
+        justify-items: center
+        // grid-auto-flow: column 
+        // justify-content: space-between
