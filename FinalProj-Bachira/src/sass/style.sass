@@ -264,6 +264,8 @@ main
         flex-direction: column
         align-items: center
         justify-content: center
+        text-align: center
+        gap: 60px
 
         .main__section-2-title
             color: colors.$web-black
@@ -276,7 +278,47 @@ main
                 font-weight: 700
                 font-size: 32px
                 letter-spacing: .3px
-                
+
+        .bachira-perks
+            display: flex
+            justify-content: space-between
+            align-items: center
+            // background-color: beige
+            width: 100%
+            height: 154px
+
+            .perk-2
+                padding: 0 20px
+                max-width: 305px !important
+
+            .perk-3
+                gap: 7px !important
+
+                img
+                    width: 64px !important 
+                    
+        
+            .perks
+                max-width: 266px
+                height: 100%
+                text-align: center
+                display: flex
+                flex-direction: column
+                align-items: center
+                gap: 10px
+
+                img
+                    width: 80px
+                    height: 64px
+                    margin-bottom: 10px
+
+                h4
+                    font-size: 20px
+                    font-weight: 700
+
+                p
+                    font-weight: 400
+                    font-size: 14px
 
 
 
@@ -308,6 +350,7 @@ main
         margin-right: 0 !important
 
     .main__section-1-boxes
+        height: auto !important
         grid-template-areas: 'box-1 box-1 box-2 box-2' 'box-3 box-3 box-4 box-4' !important
 
         .main__section-1-box
@@ -342,3 +385,11 @@ main
 
         .main__section-1-box
             height: 200px
+
+    .bachira-perks
+        gap: 50px
+        flex-direction: column
+
+        .perk-2
+            padding: 0 0 !important
+            max-width: 266px !important
