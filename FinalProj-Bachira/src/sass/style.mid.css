@@ -156,7 +156,7 @@ main article {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 100px;
+  padding-bottom: 128px;
 }
 main article h2.article-title {
   text-align: center;
@@ -196,6 +196,7 @@ main section.main__section-1 {
   gap: 30px;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 100px;
 }
 main section.main__section-1 .main__section-1-title {
   font-weight: 700;
@@ -211,10 +212,40 @@ main section.main__section-1 .main__section-1-boxes {
   grid-template-areas: "box-1 box-1 box-3 box-4" "box-2 box-2 box-3 box-4";
 }
 main section.main__section-1 .main__section-1-boxes .main__section-1-box {
+  position: relative;
   border-radius: 30px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: none;
+}
+main section.main__section-1 .main__section-1-boxes .main__section-1-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1960784314);
+  border-radius: inherit;
+  z-index: 1;
+}
+main section.main__section-1 .main__section-1-boxes .main__section-1-box .box-text {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+  z-index: 2;
+}
+main section.main__section-1 .main__section-1-boxes .main__section-1-box .box-text span {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.3px;
 }
 main section.main__section-1 .main__section-1-boxes .box-1 {
   grid-area: box-1;
@@ -232,8 +263,29 @@ main section.main__section-1 .main__section-1-boxes .box-4 {
   grid-area: box-4;
   background-image: url("../../images/Background/box-4.png");
 }
+main .main__section-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .main__section-2 .main__section-2-title {
+  color: #101913;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: 0.3px;
+}
+main .main__section-2 .main__section-2-title span {
+  color: #3C9379;
+  font-weight: 700;
+  font-size: 32px;
+  letter-spacing: 0.3px;
+}
 
 @media screen and (max-width: 1465px) {
+  main {
+    padding: 100px 90px !important;
+  }
   .header__section-1 {
     flex-direction: column;
     align-items: center;
@@ -256,9 +308,10 @@ main section.main__section-1 .main__section-1-boxes .box-4 {
     margin-right: 0 !important;
   }
   .main__section-1-boxes {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas: none !important;
-    grid-auto-rows: auto;
+    grid-template-areas: "box-1 box-1 box-2 box-2" "box-3 box-3 box-4 box-4" !important;
+  }
+  .main__section-1-boxes .main__section-1-box {
+    height: 200px;
   }
 }
 @media screen and (max-width: 900px) {
@@ -277,6 +330,18 @@ main section.main__section-1 .main__section-1-boxes .box-4 {
     width: 437px !important;
     height: 354px !important;
     margin-right: 50px;
+  }
+  .main__section-1-title {
+    font-weight: 700;
+    font-size: 28px !important;
+    line-height: 40px;
+    letter-spacing: 0.3px;
+  }
+  .main__section-1-boxes {
+    grid-template-areas: "box-1" "box-2" "box-3" "box-4" !important;
+  }
+  .main__section-1-boxes .main__section-1-box {
+    height: 200px;
   }
 }
 
