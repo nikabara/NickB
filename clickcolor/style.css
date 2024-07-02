@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: black;
+    transition: ease-in-out .2s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+button {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+main {
+    width: 600px;
+    height: 600px;
+    background-color: beige;
+
+    display: grid;
+    grid-template-areas: 
+    "d1 d2 d3"
+    "d4 bt d5"
+    "d6 d7 d8";
+}
+
+
+
+#div1 {
+    grid-area: d1;
+}
+#div2 {
+    grid-area: d2;
+}
+#div3 {
+    grid-area: d3;
+}
+#div4 {
+    grid-area: d4;
+}
+#div5 {
+    grid-area: d5;
+}
+#div6 {
+    grid-area: d6;
+}
+#div7 {
+    grid-area: d7;
+}
+#div8 {
+    grid-area: d8;
+}
+
+
+
+#change-color {
+    grid-area: bt;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rgb-place {
+    width: 50%;
+    width: 50%;
+}
