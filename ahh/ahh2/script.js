@@ -271,7 +271,7 @@ function fiveTwebtyEight() {
     const date = new Date(); // experiment by modding value of Date for example -> ...new Date("July 6");
     let dayNumber = date.getDay();
 
-    const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
     if (dayNumber == 6 || date.getDay() == 0) {
         document.body.innerText = `${weekday[dayNumber]} : resting day`;
@@ -289,7 +289,89 @@ function fiveTwebtyNine() {
     let months = [
         'იანვარი', 'თებერვალი', 'მარტი', 'აპრილი', 'მაისი', 'ივნისი',
         'ივლისი', 'აგვისტო', 'სექტემბერი', 'ოქტომბერი', 'ნოემბერი', 'დეკემბერი'
-        ];
+    ];
 
     document.body.innerText = months[monthNumber];
 }
+
+
+function one() {
+    let str1 = "Jave";
+    let str2 = "Script";
+    return str1 + str2;
+}
+
+function two() {
+    let str1 = 'და';
+    let str2 = 'იყო';
+    return `იყო ${str1} არა ${str2} რა`;
+}
+
+function three() {
+    let name = "A fucking GEORGE";
+    return name.split(" ")[2][0];
+}
+
+function four() {
+    let text = "პარიზი საფრანგეთის დედაქალაქია";
+    return text[text.length - 1];
+}
+
+function five() {
+    let capital = "XPARIS";
+    return capital.split(1, capital.length - 1);
+}
+
+function six() {
+    let inp = prompt("Wasgood G wazyo shanka? : ");
+    alert(`Wazaaaa shwanka ma ${inp} dwinga`);
+}
+
+function seven() {
+    let person = prompt("გთხოვთ შეიყვანოთ თქვენი სხელი:", "");
+    alert(`Wazaaa ${person}`);
+}
+
+function eight() {
+    let name = "nika";
+    let lastname = "baratashvili";
+    document.body.innerText = `Cpmpetition was won byyyy.. ${name} ${lastname}`;
+}
+
+function nine() {
+    let str = 'თბილისი საქართველოს დედაქალაქია';
+    let firstWord = str.split(" ")[0];
+    if (firstWord === "თბილისი") {
+        alert("Starts with თბილისი");
+    }
+    else if (firstWord === "ამსტერდამი") {
+        alert("starts with ამსტერდამი");
+    }
+}
+
+function ten() {
+    let year = 1;
+    let month = 6;
+    alert(`მე it Step
+    აკადემიაში პროგრამირება უნდა ვისწავლო ${month} თვის განმავლობაში`);
+    alert(`studied for ${year}`);
+}
+
+function eleven() {
+    let str = 'პარიზი საქართველოს დედაქალაქია';
+    alert(str.replace("პარიზი", "თბილისი"));
+}
+
+function twelve() {
+    let products = 'შოკოლადი, ბანანი, ლიმონათი, ვაშლი';
+    return products.split(',');
+}
+
+function thirteen() {
+    let string = 'Hello world, this is string';
+    let f1 = string.substr(0, 5);
+    let f2 = string.substring(6, 11);
+    let f3 = string.slice(21, string.length);
+    console.log(f1, f2, f3);
+}
+
