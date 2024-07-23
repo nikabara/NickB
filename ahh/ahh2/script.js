@@ -375,3 +375,64 @@ function thirteen() {
     console.log(f1, f2, f3);
 }
 
+
+
+function threeOne() {
+    let num1 = 7.45;
+    let num2 = '13.56';
+    
+    return Math.round(num1) * Math.round(Number(num2));
+}
+
+function threeTwo() {
+    let num1 = 20.3;
+    let num2 = 27.2;
+
+    return (num1 + num2).toFixed(3);
+}
+
+function threeThree() {
+    let num = 77;
+    
+    return Math.sqrt(num).toFixed(1);
+}
+
+
+function threeFour() {
+    let num = 3.55;
+    
+    return Math.pow(num, 3).toFixed(2);
+}
+
+function info(msg) {
+    alert(msg);
+}
+
+function exponentiation(num1, num2) {
+    let exponent = 1;
+    
+    for (let i = 0; i < num2; i++) {
+        exponent *= num1;
+    }
+
+    return exponent;
+}
+
+function isEven(num) {
+    return num%2 == 0 ? true : false;
+}
+
+function cstSplice(string, start, end) {
+    let newStr = "";
+
+    for (let i = start; i <= end; i++) {
+        newStr += string[i];
+    }
+
+    console.log(newStr);
+}
+
+function address(addr) {
+    let userAddress = prompt("Your address")
+    document.body.innerText("მე ვცხოვრობ საქართველოში, შემდეგ მისამართზე: " + userAddress)
+}
