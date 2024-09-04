@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: ease-in-out .2s;
+}
+
+html {
+    background-color: #4f4f4f;
+}
+
+header {
+    background-color: antiquewhite;
+    margin: auto;
+    width: calc(100% - 400px);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 0px 0px 25px 25px;
+}
+
+.input-div {
+    width: 50%;
+    height: 50%;
+}
+
+.search-bar {
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.search-bar:hover {
+    background-color: #e4e4e4;
+}
+
+.search-bar:focus {
+    background-color: #c6c6c6;
+}
+
+.filters-div {
+    display: flex;
+    gap: 8px;
+}
+
+.filter-focused {
+    background-color: #4f4f4f !important;
+    color: white;
+    font-weight: 700;
+}
+
+.filters {
+    padding: 9px 10px 9px 10px;
+    background-color: #ffffff;
+    border: none;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.filters:hover {
+    background-color: #e4e4e4;
+}
+
+main {
+    background-color: antiquewhite;
+    width: calc(100% - 400px); /* Adjust width as needed */
+    height: 600px;
+    margin: auto;
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    overflow-y: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.object {
+    width: 33%;
+    height: 300px;
+    background-color: rgb(204, 188, 188);
+    border: solid antiquewhite 5px;
+    padding: 6px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+main::-webkit-scrollbar {
+    background-color: transparent ;
+    width: 10px;
+}
+
+main::-webkit-scrollbar-thumb {
+    background-color: rgb(189, 175, 175);
+    border-radius: px;
+}

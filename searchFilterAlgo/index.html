@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Search</title>
+</head>
+<body>
+    
+    <header>
+        <div class="input-div">
+            <input type="text" class="search-bar" placeholder="Search..." onkeyup="validation(this.value, getValidationType())">
+        </div>
+        <div class="filters-div">
+            <button class="name-filter filters filter-focused">Name</button>
+            <button class="last-name-filter filters">Last-name</button>
+            <button class="age-filter filters">Age</button>
+            <button class="occupation-filter filters">Occupation</button>
+        </div>
+    </header>
+
+    <main></main> <!-- Data gets populised here -->
+
+    <script src="./script.js"></script>
+</body>
+</html>
