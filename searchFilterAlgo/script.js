@@ -33,11 +33,11 @@ let objectArray = [
     { name: "William", lastname: "Brown", age: 37, occupation: "Systems Analyst" }
 ];
 
-function populateData (objArr) {
+function populateData(objArr) {
     for (const object of objArr) {
         let personObject = document.createElement("div");
         personObject.classList.add("object");
-    
+
         let name = document.createElement("h2");
         name.innerText = `Name : ${object.name}`;
         personObject.appendChild(name);
@@ -67,16 +67,29 @@ function validation(input, validationName) {
     switch (validationName) {
         case "name-filter":
             populateData(objectArray.filter(x => x.name.toLocaleLowerCase().startsWith(input.toLocaleLowerCase())));
+            if (objectArray.filter(x => x.name.toLocaleLowerCase().startsWith(input.toLocaleLowerCase())).length == 0) {
+                document.querySelector("main").innerHTML = `<div class="nothing-found">Nothing found</div>`; 
+            }
             break;
         case "last-name-filter":
             populateData(objectArray.filter(x => x.lastname.toLocaleLowerCase().startsWith(input.toLocaleLowerCase())));
+            if (objectArray.filter(x => x.lastname.toLocaleLowerCase().startsWith(input.toLocaleLowerCase())).length == 0) {
+                document.querySelector("main").innerHTML = `<div class="nothing-found">Nothing found</div>`; 
+            }
             break;
         case "age-filter":
             populateData(objectArray.filter(x => x.age.toString().startsWith(input)));
+            if (objectArray.filter(x => x.age.toString().startsWith(input)).length == 0) {
+                document.querySelector("main").innerHTML = `<div class="nothing-found">Nothing found</div>`; 
+            }
             break;
         case "occupation-filter":
+            if (objectArray.filter(x => x.occupation.toLocaleLowerCase().startsWith(input.toLocaleLowerCase())).length == 0) {
+                document.querySelector("main").innerHTML = `<div class="nothing-found">Nothing found</div>`; 
+            }
             populateData(objectArray.filter(x => x.occupation.toLocaleLowerCase().startsWith(input.toLocaleLowerCase())));
-    
+            break;
+
         default:
             break;
     }
