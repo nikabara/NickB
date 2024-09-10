@@ -30,7 +30,24 @@ let objectArray = [
     { name: "Michael", lastname: "Miller", age: 32, occupation: "Videographer" },
     { name: "Chloe", lastname: "Brown", age: 22, occupation: "Pastry Chef" },
     { name: "Ella", lastname: "Taylor", age: 31, occupation: "Market Research Analyst" },
-    { name: "William", lastname: "Brown", age: 37, occupation: "Systems Analyst" }
+    { name: "William", lastname: "Brown", age: 37, occupation: "Systems Analyst" },
+    // Additional people added below:
+    { name: "Grace", lastname: "Garcia", age: 29, occupation: "Public Relations Manager" },
+    { name: "Samuel", lastname: "Martinez", age: 45, occupation: "Data Scientist" },
+    { name: "Zoe", lastname: "Hernandez", age: 26, occupation: "Event Planner" },
+    { name: "Aiden", lastname: "Lopez", age: 33, occupation: "Sales Representative" },
+    { name: "Luna", lastname: "Gonzalez", age: 31, occupation: "Real Estate Agent" },
+    { name: "Mason", lastname: "Wilson", age: 38, occupation: "Construction Manager" },
+    { name: "Nora", lastname: "Moore", age: 24, occupation: "Digital Marketer" },
+    { name: "Elijah", lastname: "Taylor", age: 27, occupation: "Financial Advisor" },
+    { name: "Sofia", lastname: "Anderson", age: 34, occupation: "Veterinarian" },
+    { name: "Jackson", lastname: "Thomas", age: 28, occupation: "Teacher" },
+    { name: "Mila", lastname: "Roberts", age: 22, occupation: "Data Analyst" },
+    { name: "Benjamin", lastname: "Lee", age: 42, occupation: "Mechanical Engineer" },
+    { name: "Lily", lastname: "Young", age: 30, occupation: "Human Resources Specialist" },
+    { name: "Alexander", lastname: "Clark", age: 26, occupation: "Systems Administrator" },
+    { name: "Harper", lastname: "Lewis", age: 35, occupation: "Insurance Broker" },
+    { name: "Jameson", lastname: "Walker", age: 29, occupation: "Creative Director" }
 ];
 
 function populateData(objArr) {
