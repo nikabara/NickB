@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+    transition: ease-in-out .2s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(26,26,26);
+    background: radial-gradient(circle, rgba(26,26,26,1) 0%, rgba(37,37,37,1) 25%, rgba(44,44,44,1) 50%, rgba(37,37,37,1) 75%, rgba(26,26,26,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-box {
+    background: rgb(35,35,35);
+    background: linear-gradient(0deg, rgba(35,35,35,1) 0%, rgba(28,28,28,1) 50%, rgba(67,67,67,1) 100%);
+    width: 208px;
+    height: 208px;
+    border-radius: 15px;
+    box-shadow: #ffffff2b 0px 0px 30px 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.time-box > h1 {
+    font-size: 100px;
+    font-weight: 800;
+}
+
+.time-type {
+    position: absolute;
+    bottom: -30px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #e6b32e;
+}
+
+main {
+    min-width: 1000px;
+    margin: auto;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 15px;
+}
