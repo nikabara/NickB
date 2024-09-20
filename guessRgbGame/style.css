@@ -1,0 +1,100 @@
+:root {
+    --header-background-col: #337ab7;
+    --main-background-col: #232323;
+    --under-header-background-col: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: ease-in-out .2s;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+header {
+    background-color: var(--header-background-col);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    height: 170px;
+}
+
+.under-header {
+    background-color: var(--under-header-background-col);
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+    margin: auto;
+}
+
+.modes {
+    height: 100%;
+    display: flex;
+}
+
+.mode-buttons, .refresh {
+    cursor: pointer;
+    color: black;
+    height: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: var(--under-header-background-col);
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+}
+
+.mode-buttons:hover, .refresh:hover {
+    background-color: var(--header-background-col);
+    color: white;
+}
+
+.mode-buttons:focus, .refresh:focus {
+    background-color: var(--header-background-col);
+    color: white;
+}
+
+main {
+    height: calc(100vh - 200px);
+    background-color: var(--main-background-col);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.color-boxes {
+    margin-top: 45px;
+    width: 800px;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 25px;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 25px;
+}
+
+.color-box {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    border: solid #3d3d3d 5px;
+}
+
+.color-box:hover {
+    box-shadow: #ffffff39 0px 0px 20px;
+}
+
+.button-focused {
+    background-color: var(--header-background-col);
+    color: white;
+}
