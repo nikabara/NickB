@@ -2,6 +2,9 @@ let easy = document.getElementById("mode-ease");
 let hard = document.getElementById("mode-hard");
 let refresh = document.querySelector(".refresh");
 let rgbText = document.querySelector(".rgb-text");
+let hint = document.querySelector(".hint");
+let easyBoxes = document.querySelectorAll(".easy");
+let allColorBoxes = document.querySelectorAll(".color-box");
 
 let currentMode = 'easy';
 
@@ -33,6 +36,8 @@ function chooseRandomColor(colorArray, difficulty) {
     }
 }
 
+let colorArray = generateRandomColor2DArray();
+
 function modeEasy() {
     currentMode = "easy";
 
@@ -41,11 +46,8 @@ function modeEasy() {
         element.style.display = "none";
     });
 
-    const colorArray = generateRandomColor2DArray();
-
     rgbText.innerText = chooseRandomColor(colorArray, 'easy')[0].toUpperCase();
 
-    let easyBoxes = document.querySelectorAll(".easy");
     for (let i = 0; i < easyBoxes.length; i++) {
         easyBoxes[i].style.backgroundColor = colorArray[i][0];
     }
@@ -59,11 +61,7 @@ function modeHard() {
         element.style.display = "block";
     });
 
-    const colorArray = generateRandomColor2DArray();
-
     rgbText.innerText = chooseRandomColor(colorArray, 'hard')[0].toUpperCase();
-
-    let allColorBoxes = document.querySelectorAll(".color-box");
 
     for (let i = 0; i < allColorBoxes.length; i++) {
         allColorBoxes[i].style.backgroundColor = colorArray[i][0]
@@ -83,15 +81,11 @@ const Toast = Swal.mixin({
 });
 
 function refreshColors() {
-    Swal.fire({
-        title: "HaHAAAAA bro really used this button XDDD",
-        imageUrl: "https://images-cdn.ubuy.co.id/634e8e9f6ff8b20d0674b386-distorted-laughing-emoji-sticker-decal.jpg",
-        imageHeight: 300
-    }).then((result) => {
-        Toast.fire({
-            title: "Just click the same mode again to refresh =)"
-        })
+    allColorBoxes.forEach(box => {
+        box.childNodes[0].style.backgroundColor = 'transparent';
     });
+
+    colorArray = generateRandomColor2DArray();
 
     if (currentMode === "easy") {
         modeEasy();
@@ -101,9 +95,55 @@ function refreshColors() {
     }
 }
 
+function boostColor (r, g, b) {
+    if (r > g && r > b) {
+        return 'r';
+    }
+    else if (g > r && g > b) {
+        return 'g';
+    }
+    else if (b > r && b > g) {
+        return 'b';
+    }
+
+    throw new Error("idk wtf just happened");
+}
+
+function hintColor (colorArray) {
+    let rgbArray = [];
+
+    colorArray.forEach(element => { rgbArray.push(element[1]); });
+
+    let boost = currentMode == 'easy' ? 75 : 50;
+    let decrease = currentMode == 'easy' ? 65 : 40;
+
+    let guessRgb = rgbText.innerText.replace(/[^\d,]+/g, '').split(',').map(x => x = parseInt(x));
+    let whichToBoost = boostColor(guessRgb[0], guessRgb[1], guessRgb[2]);
+
+    allColorBoxes.forEach(box => {
+        let currentRgb = box.style.backgroundColor.replace(/[^\d,]+/g, '').split(',').map(x => x = parseInt(x));
+        if (currentRgb[0] != guessRgb[0] && currentRgb[1] != guessRgb[1] && currentRgb[2] != guessRgb[2]) {
+            switch (whichToBoost) {
+                case 'r':
+                    box.childNodes[0].style.backgroundColor = `rgb(${currentRgb[0] - decrease}, ${currentRgb[1] + boost}, ${currentRgb[2] + boost})`;
+                    break;
+                case 'g':
+                    box.childNodes[0].style.backgroundColor = `rgb(${currentRgb[0] + boost}, ${currentRgb[1] - decrease}, ${currentRgb[2] + boost})`;
+                case 'b':
+                    box.childNodes[0].style.backgroundColor = `rgb(${currentRgb[0] + boost}, ${currentRgb[1] + boost}, ${currentRgb[2] - decrease})`;
+            
+                default:
+                    break;
+            }
+        }
+    });
+    
+}
+
 easy.addEventListener("click", modeEasy);
 hard.addEventListener("click", modeHard);
 refresh.addEventListener("click", refreshColors);
+hint.addEventListener("click", () => hintColor(colorArray));
 
 document.querySelectorAll("button").forEach(button => {
     button.onclick = () => {
@@ -120,6 +160,8 @@ document.querySelectorAll(".color-box").forEach(element => {
                 title: "Yeah you got it",
             });
             
+            colorArray = generateRandomColor2DArray();
+
             switch (currentMode) {
                 case 'easy':
                     modeEasy();
@@ -130,9 +172,14 @@ document.querySelectorAll(".color-box").forEach(element => {
                 default:
                     break;
             }
+
+            allColorBoxes.forEach(box => {
+                box.childNodes[0].style.backgroundColor = 'transparent';
+            });
         }
         else {
             element.style.backgroundColor = "#232323";
+            element.childNodes[0].style.backgroundColor = 'transparent'
             element.style.boxShadow = "none";
             Toast.fire({
                 icon: "error",
