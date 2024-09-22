@@ -129,8 +129,10 @@ function hintColor (colorArray) {
                     break;
                 case 'g':
                     box.childNodes[0].style.backgroundColor = `rgb(${currentRgb[0] + boost}, ${currentRgb[1] - decrease}, ${currentRgb[2] + boost})`;
+                    break;
                 case 'b':
                     box.childNodes[0].style.backgroundColor = `rgb(${currentRgb[0] + boost}, ${currentRgb[1] + boost}, ${currentRgb[2] - decrease})`;
+                    break:
             
                 default:
                     break;
